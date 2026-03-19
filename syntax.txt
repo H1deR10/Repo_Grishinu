@@ -1,0 +1,47 @@
+Дбивер создаём бд
+
+id: {
+    type: DataTypes.INTEGER,
+    autoIncrement: true,
+    primaryKey: true
+},
+
+- первичный ключ
+
+
+Заходим на appDiagrams.net и создаём диаграмму классов
+
+Создаём с помощью инструмента list бд с названием "client", ниже пишем "+ id: integer(PK)", "+ name: string", "- email: varchar(unique)", "+ rating: decimal (0)", 
+"- bday: dateonly"
+
+"+" - обязательный аттрибут
+"-" - необязательный
+"unique" - не повторяются
+"+ rating: decimal (0)" - "0" в скобках - изначальный рейтиг, в данном случае он = 0
+
+product:
++ id: integer(PK)
++ name: string
+- description: string
++ price: decimal (0)
+
+order:
++ id: integer (PK)
++ status: enum (open)
++ date: date (now)
++ totalPrice: decimal (0)
+
+cart:
++ id: integer (PK)
++ quantity: integer (1)
+ 
+Теперь делаем связи
+
+1 вариант) Добавляем в order "clientid: integer (FK)" и введём из id клиента в clientid и описываем (1 ко многим) и наоборот
+
+2 вариант) Берём связь id из cart и тянем в order и пишем orderid
+
+Описать всё через sequelize
+
+
+Чтобы добавить модель в бд, надо 
