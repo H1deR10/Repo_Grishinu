@@ -1,8 +1,9 @@
 import express from 'express' // создание экземпляра express из внешнего express
 import 'dotenv/config' // import одного экземпляра - import {Sequelize} from 'sequelize'
 import { sequelize } from './db.js'
-import { cors } from "cors"
-import { router } from "./routes/router.js" // import главного роутера
+import cors from "cors"
+import router from "./routes/router.js" // import главного роутера
+import errorHandler from './middle ware/error-landler.js'
 
 // константы приложения(app) и порт
 const app = express() 
@@ -12,6 +13,8 @@ const port = process.env.PORT || 3001
 app.use(cors())
 app.use(express.json())
 app.use('/api', router) // отдельный маршрут api
+
+app.use(errorHandler)
 
 
 const startServer = async () => {

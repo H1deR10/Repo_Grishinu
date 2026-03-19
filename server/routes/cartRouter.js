@@ -1,4 +1,4 @@
-import { Сart } from '../models/cartModel.js'
+import { Cart } from '../models/cartModel.js'
 import { Router } from "express"
 import { getAllCarts, createCart } from "../controlers/cartController.js"
 

@@ -1,7 +1,7 @@
-import { sequelize } from "../db";
+import { sequelize } from "../db.js";
 import { DataTypes } from "sequelize";
 
-const Cart = sequelize.define(
+export const Cart = sequelize.define(
     "cart",
     {
         id: {
@@ -14,8 +14,5 @@ const Cart = sequelize.define(
             allowNull: false,
             defaultValue: 1
         }
-    },
-    {
-
-    },
+    }
 )

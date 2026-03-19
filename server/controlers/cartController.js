@@ -1,4 +1,4 @@
-import { Cart } from '../models/cartModel'
+import { Cart } from '../models/cartModel.js'
 
 // http-get метод
 export const getAllCarts = async (req, res) => {

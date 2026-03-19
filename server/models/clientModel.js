@@ -1,7 +1,7 @@
-import { sequelize } from "../db";
+import { sequelize } from "../db.js";
 import { DataTypes } from "sequelize";
 
-const client = sequelize.define(
+export const Client = sequelize.define(
     "client",
     {
         id: {
@@ -25,15 +25,5 @@ const client = sequelize.define(
         bday: {
             type: DataTypes.DATEONLY
         }
-    },
-    {
-        createAt: {
-            type: DataTypes.DATE,
-            defaultValue: DataTypes.NOW
-        },
-        updateAt: {
-            type: DataTypes.DATE,
-            defaultValue: DataTypes.NOW
-        }
-    },
+    }
 )

@@ -1,7 +1,7 @@
-import { sequelize } from "../db";
+import { sequelize } from "../db.js";
 import { DataTypes } from "sequelize";
 
-const Order = sequelize.define(
+export const Order = sequelize.define(
     "order",
     {
         id: {
@@ -28,8 +28,5 @@ const Order = sequelize.define(
             defaultValue: 0,
             allowNull: false
         }
-    },
-    {
-
-    },
+    }
 )
