@@ -1,6 +1,5 @@
 import { Client } from '../models/clientModel.js'
 
-// http-get метод
 export const getAllClients = async (req, res) => {
     try {
         const getAllClients = await Client.findAll() // SELECT * from CLIENTS
@@ -10,7 +9,6 @@ export const getAllClients = async (req, res) => {
     }
 }
 
-// HTTP-post метод
 
 export const createClient = async (req, res) => {
     try {

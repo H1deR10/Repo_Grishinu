@@ -1,6 +1,5 @@
 import { Product } from '../models/productModel.js'
 
-// http-get метод
 export const getAllProducts = async (req, res) => {
     try {
         const getAllProducts = await Product.findAll() 
@@ -10,7 +9,6 @@ export const getAllProducts = async (req, res) => {
     }
 }
 
-// HTTP-post метод
 
 export const createProduct = async (req, res) => {
     try {

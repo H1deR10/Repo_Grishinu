@@ -1,6 +1,5 @@
 import { Order } from '../models/orderModel.js'
 
-// http-get метод
 export const getAllOrders = async (req, res) => {
     try {
         const getAllOrders = await Order.findAll() 
@@ -10,7 +9,6 @@ export const getAllOrders = async (req, res) => {
     }
 }
 
-// HTTP-post метод
 
 export const createOrder = async (req, res) => {
     try {

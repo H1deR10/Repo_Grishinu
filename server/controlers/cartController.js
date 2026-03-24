@@ -1,6 +1,5 @@
 import { Cart } from '../models/cartModel.js'
 
-// http-get метод
 export const getAllCarts = async (req, res) => {
     try {
         const getAllCarts = await Cart.findAll() 
@@ -10,7 +9,6 @@ export const getAllCarts = async (req, res) => {
     }
 }
 
-// HTTP-post метод
 
 export const createCart = async (req, res) => {
     try {
