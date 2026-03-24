@@ -2,7 +2,7 @@ import { Client } from '../models/clientModel.js'
 
 export const getAllClients = async (req, res) => {
     try {
-        const getAllClients = await Client.findAll() // SELECT * from CLIENTS
+        const getAllClients = await Client.findAll()
         res.status(200).json(getAllClients)
     } catch (err) {
         next(err)
@@ -25,7 +25,6 @@ export const createClient = async (req, res) => {
     }
 }
 
-// GET-ONE end-point
 
 export const getOneClients = async (req, res, next) => {
     try {
@@ -40,7 +39,6 @@ export const getOneClients = async (req, res, next) => {
     }
 }
 
-// HTTP-DELETE
 
 export const deleteClient = async (req, res, next) => {
     try {
@@ -55,5 +53,4 @@ export const deleteClient = async (req, res, next) => {
     }
 }
 
-// HTTP-UPDATE
 
